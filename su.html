@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="su.css" type="text/css"/>
+</head>
+<body>
+    <audio id="musicele" class="uppage" src="./music/backmusic.mp3" style="outline: none;">您的浏览器不支持 audio 标签。</audio>
+    <h1 id="colorword">Happy Birthday</h1>
+
+    <div id="container">
+    </div>
+    <div class="uppage maibody" id="scrollword">
+        <marquee behavior="scroll" direction="up" loop=1 scrollamount=2 controllers style="max-height:450px;text-align: center;">
+            是不是啥也没有</br>
+            别慌</br>
+            点一下屏幕试试</br></br></br>
+            祝你生日快乐</br></br>
+            祝你生日快乐</br></br>
+            祝你生日快乐</br></br>
+            祝你生日快乐</br></br>
+            Happy Birthday to you</br></br>
+            Happy Birthday to you</br></br>
+            Happy Birthday to you</br></br>
+            Happy Birthday to you</br></br></br></br></br>
+            <img  src="music/cake.PNG" ></br></br></br></br></br>
+            下面这个，我也没办法</br>
+            唱了好几遍，这个最能听了</br></br></br></br></br>
+            我是一颗糖</br>
+            一颗什么糖</br>
+            一颗五彩缤纷</br>
+            活力四射的</br>
+            跳跳糖</br></br>
+            好了，没有了 ^__^</br></br>
+            祝你5月4日生日快乐呀！</br></br>
+            如果觉得我唱的好听</br></br>
+            你可以刷新再来一遍。
+        </marquee>
+    </div>
+
+
+<script src="script/colorword.js"></script>
+<script src="script/sketch/sketch.min.js"></script>
+<script src="script/sketch/particle.js"></script>
+<script src="script/sketch/fireworks.js"></script>
+<script>
+    init();
+    //initGameBody();
+    function toggleSound() {
+                    var music = document.getElementById('musicele');//获取ID  
+                    if(music.ended)
+                    {
+                        music.paused=true;                     
+                    }
+                    else{
+                        if (music.paused) { //判读是否播放  
+                            music.paused=false;
+                            music.play(); //没有就播放                        
+                        }
+                    }
+                }       
+    setInterval("toggleSound()",500);
+</script>
+
+</body>
+</html>
